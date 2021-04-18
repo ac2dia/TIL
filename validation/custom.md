@@ -131,3 +131,10 @@ class UserControllerTest {
 ```
 
 - mockMvc 테스트 코드를 통해 dto 객체에 있는 필드 값들에 대해서 정의되어 있는 @Valid 통과 유무를 확인한다.
+
+# 참고 문헌
+[1] Java Bean Validation Basics, https://www.baeldung.com/javax-validation
+
+[2] Validation in Spring Boot, https://www.baeldung.com/spring-boot-bean-validation
+
+[3] Spring MVC Custom Validation, https://www.baeldung.com/spring-mvc-custom-validator
