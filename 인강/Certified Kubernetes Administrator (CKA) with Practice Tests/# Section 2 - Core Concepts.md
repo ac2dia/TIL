@@ -41,3 +41,59 @@ $ kubectl create -f pod-definition.yml
 
 $ kubectl get pods
 ```
+
+## 26. Practice Test - Pods
+
+- create pods
+- get pods / describe pods
+- kubectl apply -f nginx-pod.yaml
+- delete pods
+
+## 28. Recap - ReplicaSets
+
+- replica controller
+- pods crush!! ㅠㅠ => so more than one pods at the same time.
+- Load Balancing & Scaling
+
+```yaml
+# replicaset-definition.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      tpye: front-end
+```
+
+```shell
+$ kubectl apply -f replicaset-definition.yaml
+$ kubectl get replicaset (rs)
+$ kubectl get pods
+```
+
+- Labels and Selectors (라벨링 작업)
+- scale (replica 갯수 조절 가능))
+
+## 29. Practice Test - ReplicaSets
+
+- create replicaset
+- get replicaset / describe replicaset
+- kubectl apply -f new-replica-set.yaml
+- delete replicaset
+- scale --replicas=n rs new-replica-set (scale-up / scale-down)
