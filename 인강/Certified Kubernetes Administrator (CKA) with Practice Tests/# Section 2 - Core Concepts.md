@@ -97,3 +97,23 @@ $ kubectl get pods
 - kubectl apply -f new-replica-set.yaml
 - delete replicaset
 - scale --replicas=n rs new-replica-set (scale-up / scale-down)
+
+## 31. Deployments
+
+-
+
+## 33. Practice Test - Deployments
+
+## 35. Services
+
+- Services Types
+  - NodePort, ClusterIP, Loadbalancer
+  - NodePort = Access to Node IP and Port by Direct!
+
+## 36. Services - Cluster IP
+
+## 37. Services - Loadbalancer
+
+## 38. Practice Test - Services
+
+- service, deployment ...
