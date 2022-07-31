@@ -117,3 +117,50 @@ $ kubectl get pods
 ## 38. Practice Test - Services
 
 - service, deployment ...
+
+## 40. Namespaces
+
+- Isolate!
+- kube-system / default / kube-public
+- DNS
+- Resource Quota
+
+## 41. Practice Test - Namespaces
+
+## 43. Imperative vs Declarative
+
+- Infrastructure as Code
+
+## 44. Certification Tips - Imperative Commands with Kubectl
+
+- --dry-run: By default as soon as the command is run, the resource will be created. If you simply want to test your command , use the
+- --dry-run=client option. This will not create the resource, instead, tell you whether the resource can be created and if your command is right.
+- -o yaml: This will output the resource definition in YAML format on screen.
+
+## 45. Practice Test - Imperative Commands
+
+## 47. Kubectl Apply Command
+
+- Create Objects
+  - kubectl apply -f nginx.yaml
+- Update Objects
+  - kubectl apply -f nginx.yaml
+
+```yaml
+# nginx.yaml
+
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end-service
+sepc:
+  containers:
+    - name: nginx-container
+      image: nginx:1.18
+```
+
+$ kubectl apply -f nginx.yaml
