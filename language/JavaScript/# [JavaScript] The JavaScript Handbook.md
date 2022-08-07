@@ -1,4 +1,4 @@
-# The JavaScript Handbook
+# [JavaScript] The JavaScript Handbook
 
 ## 7. Variables
 
